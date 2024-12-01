@@ -5,22 +5,6 @@ import { FoodThatCanNotEat } from '../Validation/foodThatCanNotEatValidator.js';
 import { splitValuesToArray } from '../Utils/coachNamesSplit.js';
 
 export class InputHandler {
-  // async getCoachNamesInput() {
-  //   return await Console.readLineAsync('코치의 이름을 입력해 주세요. (, 로 구분)\n');
-  // }
-
-  // async validateCoachNames(splitCoachNames) {
-  //   let isValid = false;
-  //   while (!isValid) {
-  //     try {
-  //       isValid = new CoachNames(splitCoachNames);
-  //       return splitCoachNames;
-  //     } catch (e) {
-  //       Console.print(e.message);
-  //     }
-  //   }
-  // }
-
   async getCoachNamesInput() {
     let isValid = false;
     while (!isValid) {

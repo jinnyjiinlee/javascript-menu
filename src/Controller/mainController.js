@@ -8,14 +8,14 @@ export class MainController {
   }
 
   async startProgram() {
-    // this.output.printStartMessage();
-    // const splitCoachNames = await this.input.getCoachNamesInput();
-    
-    // const foodThatCanNotEatOfAllCoachToArray = await this.input.getFoodThatCanNotEatInput(splitCoachNames);
+    this.output.printStartMessage();
+    const splitCoachNames = await this.input.getCoachNamesInput();
 
-    // console.log('foodThatCanNotEatOfAllCoachToArray: ', foodThatCanNotEatOfAllCoachToArray)
-    // 추첨 결과 출력하기 
+    const foodThatCanNotEatOfAllCoachToArray =
+      await this.input.getFoodThatCanNotEatInput(splitCoachNames);
 
-    this.output.printRecommendationResult();
+    // 추첨 결과 출력하기
+
+    this.output.printRecommendationResult(splitCoachNames, foodThatCanNotEatOfAllCoachToArray);
   }
 }
