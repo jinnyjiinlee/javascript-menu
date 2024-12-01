@@ -13,6 +13,8 @@ export class MainController {
     
     const foodThatCanNotEatOfAllCoachToArray = await this.input.getFoodThatCanNotEatInput(splitCoachNames);
 
+    console.log('foodThatCanNotEatOfAllCoachToArray: ', foodThatCanNotEatOfAllCoachToArray)
+
     // 각 코치별 못 먹는 메뉴 입력 받기
   }
 }
