@@ -1,8 +1,6 @@
 import { InputHandler } from '../View/inputView.js';
 import { OutputHandler } from '../View/outputView.js';
 
-import { splitCoachNamesToArray } from '../Utils/coachNamesSplit.js';
-
 export class MainController {
   constructor() {
     this.input = new InputHandler();
@@ -11,7 +9,10 @@ export class MainController {
 
   async startProgram() {
     this.output.printStartMessage();
+    const splitCoachNames = await this.input.getCoachNamesInput();
+    
+    const foodThatCanNotEatOfAllCoachToArray = await this.input.getFoodThatCanNotEatInput(splitCoachNames);
 
-    const coachNames = await this.input.getCoachNamesInput();
+    // 각 코치별 못 먹는 메뉴 입력 받기
   }
 }

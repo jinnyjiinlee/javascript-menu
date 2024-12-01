@@ -1,2 +1,2 @@
-export const splitCoachNamesToArray = (coachNames) =>
-  coachNames.split(',').map((coachName) => coachName.trim());
+export const splitValuesToArray = (values) =>
+  values.split(',').map((value) => value.trim());
